@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<script src="angular.min.js"></script>
+</head>
+<!-- ng-app is a predefine directive 
+from here angular js is bootstrap
+  -->
+<body ng-app>
+<input type="text" ng-model="style" placeholder="Type Style">
+<div class="{{style}}">
+	This is Style Demo
+</div>
+<input type="text" placeholder="Type First Name" ng-model="first">
+<input type="text" ng-model="last" placeholder="Type Last Name">
+<h1>NAme is {{first+last}}</h1>
+	<input type="text" ng-model="qt" placeholder="Type Quantity">
+	<input ng-model="pr" type="text" placeholder="Type Price">
+	<h1>Amount is {{qt*pr}}</h1>
+</body>
+</html>
