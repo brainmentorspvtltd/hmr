@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Shop Demo</title>
+	<script src="libs/angular.min.js"></script>
+	<script src="js/module.js"></script>
+	<script src="js/model.js"></script>
+	<script src="js/controller.js"></script>
+</head>
+<body ng-app="shopmodule">
+	<div ng-controller="shopctrl">
+	<input type="text" ng-model="searchobj" placeholder="Type To Search">
+	<select ng-model="sorting">
+		<option value="price">price</option>
+		<option value="name">name</option>
+	</select>
+	<a href="#" ng-click="loadMobileData()">Mobile</a>
+	<ul>
+	<li ng-repeat="obj in result.data.mobiles|filter:searchobj|orderBy:sorting">
+		{{obj.name|uppercase}} {{obj.price|currency}} <img ng-src="{{obj.image}}" width="100" height="100">
+	</li>
+	
+</ul>
+	
+	</div>
+	
+</body>
+</html>
